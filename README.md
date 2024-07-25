@@ -5,6 +5,6 @@ We shall use SQL, Excel, and Python to track user engagement of an education pla
 
 Here is the outline of this project:
 
-I. Data Preparation with SQL
+## I. Data Preparation with SQL
 
 We use the `student_purchases` table from the `data_scientist_project` database to create a result set with the following columns: `purchase_id`,
