@@ -124,7 +124,7 @@ For each of the four groups, we then calculated the 95% confidence interval, ass
 
 We see again that the students' engagement in Q2 2021 to Q2 2022 increased for free-plan students and decreased for paying students.
 
-### Performing Hypothesis Testing
+### III. Performing Hypothesis Testing
 
 As we want to reach a data-driven conlcusion on whether we saw an increased number of minutes watched on the platform for the students after new features were introduced, we use hypothesis testing on both groups (free-plan and paying) for 2021 and 2022.
 
@@ -155,6 +155,10 @@ For the free-plan students, the t-statistic is negative, indicating that the mea
 
 For the paid subscription students, the t-statistic is positive, indicating that the mean engagement in Q2 2022 is lower than in Q2 2021. Since the t-statistic (2.48) is greater than the critical value (1.96121), this means the difference is statistically significant. Therefore, we accept the null hypothesis in this case, i.e. engagement of free-plan students in Q2 2022 is lower than that in Q2 2021.
 
+## 8. Data Prediction using Linear Regression
+
+Using `sklearn` package in Python, we perform a linear regression using `minutes_watched` column as a predictor and `certificates_issued` as a target. 
+
 ### Analyzing potential Type I and Type II Error and Their Costs to the Company:
 
 We now analyze the potential impact of possible Type I and Type II errors for each group.
@@ -177,11 +181,31 @@ Continuing with Excel, we shall now analyze the correlation between the minutes 
 
 Using Excel, we find that the corerlation coefficient between user engagement (measured by minutes watched) and the number of issued certificates is approximately `0.5126`, suggesting a moderate positive correlation between user engagement and the number of issued certificates. A scatterplot of the dataset consisting of points `(meansures_watched, number_of_certificates)` can be found in the Excel file.
 
-## Dependencies and Probabilities
+## 7. Dependencies and Probabilities
 
 We now further analyze the engagement students on the platform to assess the probabilities of a student engaging in a lecture for the year 2021, 2022, and both years, respectively. We also analyze whether the event of a student engaging in a lecture through the company's platform in 2021 is independent of the the event of he/she engaging in a lecture in 2022.
 
 We have used MySQL to do our analysis.
 
-### Assessing Event Dependencies
+### I. Assessing Event Dependencies
+
+Let $A$ be the event of a student watching a lecture in Q2 of 2021, and let $B$ be the event of a student watching a lecture in Q2 of 2022. Then using MySQL queries, we get that $P(A) \cong 48.23%$, $P(B) \cong 55.81 % $, and $P(A \cap B) \cong 4.04 % $. As $P(A)P(B) \cong 26.92% \neq P(A \cap B)$, we conclude that the events $A$ and $B$ are not independent.
+
+### II. Calculating Probabilities
+
+Through MySQL commands, we also calculate that the probability that a student watched a lecture in Q2 of 2021, given that he watched a lecture in Q2 of 2022, i.e. $P(A | B)$, is approximately $7.24 % $, and that the probability that a student watched a lecture in Q2 of 2022, given that he watched a lecture in Q2 of 2021, i.e. $P(B | A)$, is approximately $8.38 % $.
+
+The low customer retention rate of the platform suggests that the company failed to see the expected increase in user engagement from Q2 2021 to Q2 2022.
+
+## 8. Data Prediction with Python
+
+Finally, we perform a linear regression using the `minutes_watched` column as a predictor and `certificates_issued` as a target. We use `sklearn` package to impliment linear regression.
+
+The resulting best line-of-fit with 80-20 train-test-split is $y = 0.002x + 1.266$, giving us the $R^2$ values of $0.2638$ and $0.2526$ for the particular training and test set that we utilized, respectively.
+
+This means that approximately $27.37%$ of the variance in the training data’s target variable (certificates_issued) can be explained by the predictor variable (minutes_watched). This is a relatively low value, suggesting that the model does not fit the training data very we.
+
+Likewise, an $R^2$ value of $0.2526$ for the testing data means that only about $25.26%$ of the variance in the testing data’s target variable can be explained by the predictor variable, indicating that that the model does not fit the testing data very well either.
+
+## Summary
 
