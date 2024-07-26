@@ -154,3 +154,27 @@ From the test, we conclude the following:
 For the free-plan students, the t-statistic is negative, indicating that the mean engagement in Q2 2022 is higher than in Q2 2021. Since the absolute value of the t-statistic (2.82) is greater than the critical value (1.96117), this means the difference is statistically significant. Therefore, for the freee-plan student, we reject the null hypothesis and accept the alternative hypothesis that engagement of free-plan students in Q2 2022 is higher than that in Q2 2021.
 
 For the paid subscription students, the t-statistic is positive, indicating that the mean engagement in Q2 2022 is lower than in Q2 2021. Since the t-statistic (2.48) is greater than the critical value (1.96121), this means the difference is statistically significant. Therefore, we accept the null hypothesis in this case, i.e. engagement of free-plan students in Q2 2022 is lower than that in Q2 2021.
+
+### Analyzing potential Type I and Type II Error and Their Costs to the Company:
+
+We now analyze the potential impact of possible Type I and Type II errors for each group.
+
+#### Type I Error:
+
+Free-Plan Students: If we incorrectly conclude that engagement has increased, the company might invest more in the new features, thinking they are effective, when they are not. This could lead to wasted resources and missed opportunities to improve actual engagement.
+
+Paid Subscription Students: If we incorrectly conclude that engagement has decreased, the company might reduce investment in the new features or make unnecessary changes, potentially disrupting a system that is actually working well.
+
+#### Type II Error:
+
+Free-Plan Students: If we fail to recognize an actual increase in engagement, we might miss the opportunity to further enhance and promote the new features that are working well, leading to slower growth in user engagement.
+
+Paid Subscription Students: If we fail to recognize an actual decrease in engagement, the company might continue investing in features that are not effective, leading to a decline in user satisfaction and potential loss of subscribers.
+
+## 6. Data Analysis with Excel - Correlation Coefficients
+
+Continuing with Excel, we shall now analyze the correlation between the minutes watched on the platform and the number of certificates issued to sutdents. We shall work with the minutes_and_certificates.csv file created in step 3.
+
+Using Excel, we find that the corerlation coefficient between user engagement (measured by minutes watched) and the number of issued certificates is approximately `0.5126`, suggesting a moderate positive correlation between user engagement and the number of issued certificates. A scatterplot of the dataset consisting of points `(meansures_watched, number_of_certificates)` can be found in the Excel file.
+
+## 
