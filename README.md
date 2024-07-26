@@ -177,4 +177,11 @@ Continuing with Excel, we shall now analyze the correlation between the minutes 
 
 Using Excel, we find that the corerlation coefficient between user engagement (measured by minutes watched) and the number of issued certificates is approximately `0.5126`, suggesting a moderate positive correlation between user engagement and the number of issued certificates. A scatterplot of the dataset consisting of points `(meansures_watched, number_of_certificates)` can be found in the Excel file.
 
-## 
+## Dependencies and Probabilities
+
+We now further analyze the engagement students on the platform to assess the probabilities of a student engaging in a lecture for the year 2021, 2022, and both years, respectively. We also analyze whether the event of a student engaging in a lecture through the company's platform in 2021 is independent of the the event of he/she engaging in a lecture in 2022.
+
+We have used MySQL to do our analysis.
+
+### Assessing Event Dependencies
+
