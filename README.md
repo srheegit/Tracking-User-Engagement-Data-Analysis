@@ -96,3 +96,48 @@ After removing the outliers, we store the resulting truncated dataset into four 
 * minutes_watched_2021_paid_1_no_outliers.csv
 * minutes_watched_2022_paid_1_no_outliers.csv
 
+## 5. Data Analysis with Excel - Hypothesis Testing.
+
+Our company expects that there was an increase in student engagement following their 2022 updates on their platform. We shall perform a hypotehsis testing to see whether there was an actual increase in student engagement for both the free-plan student groups and the paid-subscription student groups.
+
+We have imported the four csv files from step 4 to a workbook, one worksheet for each file.
+
+### I. Calculating Mean and Median Values
+
+Using the tables we have improted, we calculated the mean and medians of the four groups of students. Here are the results:
+
+* 2021 free-plan student: mean `13.7`; median `2.5`
+* 2022 free-plan student: mean `16.7`; median `5.2`
+* 2021 paid-plan student: mean `308.1`; median `105.1`
+* 2022 paid-plan student: mean `253.8`; median `89.0`
+
+That medians are much smaller than the mean for all four dataset confirms our observation from Python analysis that all four are right skewed. However, we can see that the engagement for paid subscription actually _decreased_, although the engagement for free plan increased.
+
+### II. Calculating Confidence Intervals
+
+For each of the four groups, we then calculated the 95% confidence interval, assumpting normal distribution. The result is as follows:
+
+* 2021 free-plan student: 13.66 &#177; 1.48
+* 2022 free-plan student: 16.68 &#177; 1.55
+* 2021 paid-plan student: 308.06 &#177; 29.19
+* 2022 paid-plan student: 253.80 &#177; 24.12
+
+We see again that the students' engagement in Q2 2021 to Q2 2022 increased for free-plan students and decreased for paying students.
+
+### Performing Hypotehsis Testing
+
+As we want to reach a data-driven conlcusion on whether we saw an increased number of minutes watched on the platform for the students after new features were introduced, we use hypothesis testing on both groups (free-plan and paying) for 2021 and 2022.
+
+Our null and alternative hypotheses are, respectively, the following:
+
+* Null hypothesis: The engagement (minutes watched) in Q2 2021 is higher than or equal to the one in Q2 2022.
+* Alternative hypothesis: The engagement (minutes watched) in Q2 2021 is lower than the one in Q2 2022.
+
+Additionally, we make the following assumptions:
+
+* We assume a normal distribution.
+* or free-plan students, we perform a two-sample t-test assuming equal variances.
+For paying students, we perform a two-sample t-test assuming unequal variances.
+
+
+
