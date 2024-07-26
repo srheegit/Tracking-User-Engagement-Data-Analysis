@@ -149,3 +149,8 @@ For paying students, we assume unequal variances because of the following reason
 * Heterogeneity of Variances: Again from our visualization of distribution in Python, we saw that paying students have more varied engagement patterns, possibly due to access to additional features, courses, and resources.
 * More Accurate Results: Assuming unequal variances allows for a more accurate analysis when there is a significant difference in variability between the two groups being compared.
 
+From the test, we conclude the following:
+
+For the free-plan students, the t-statistic is negative, indicating that the mean engagement in Q2 2022 is higher than in Q2 2021. Since the absolute value of the t-statistic (2.82) is greater than the critical value (1.96117), this means the difference is statistically significant. Therefore, for the freee-plan student, we reject the null hypothesis and accept the alternative hypothesis that engagement of free-plan students in Q2 2022 is higher than that in Q2 2021.
+
+For the paid subscription students, the t-statistic is positive, indicating that the mean engagement in Q2 2022 is lower than in Q2 2021. Since the t-statistic (2.48) is greater than the critical value (1.96121), this means the difference is statistically significant. Therefore, we accept the null hypothesis in this case, i.e. engagement of free-plan students in Q2 2022 is lower than that in Q2 2021.
