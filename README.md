@@ -96,7 +96,7 @@ After removing the outliers, we store the resulting truncated dataset into four 
 * minutes_watched_2021_paid_1_no_outliers.csv
 * minutes_watched_2022_paid_1_no_outliers.csv
 
-## 5. Data Analysis with Excel - Hypothesis Testing.
+## 5. Data Analysis with Excel - Hypothesis Testing
 
 Our company expects that there was an increase in student engagement following their 2022 updates on their platform. We shall perform a hypotehsis testing to see whether there was an actual increase in student engagement for both the free-plan student groups and the paid-subscription student groups.
 
