@@ -124,7 +124,7 @@ For each of the four groups, we then calculated the 95% confidence interval, ass
 
 We see again that the students' engagement in Q2 2021 to Q2 2022 increased for free-plan students and decreased for paying students.
 
-### Performing Hypotehsis Testing
+### Performing Hypothesis Testing
 
 As we want to reach a data-driven conlcusion on whether we saw an increased number of minutes watched on the platform for the students after new features were introduced, we use hypothesis testing on both groups (free-plan and paying) for 2021 and 2022.
 
@@ -139,5 +139,13 @@ Additionally, we make the following assumptions:
 * or free-plan students, we perform a two-sample t-test assuming equal variances.
 For paying students, we perform a two-sample t-test assuming unequal variances.
 
+For free-plan students, we assume equal variances because of the following reasons:
 
+* Homogeneity of Variances: We can see from our distribution plots through Python that variability in minutes watched by free-plan students is similar across different time periods. The reason for this may be that free-plan students might have similar engagement patterns due to the limited features available to them.
+* Simplified Analysis: Assuming equal variances simplifies the analysis and is a common practice when there’s no strong evidence suggesting otherwise.
+
+For paying students, we assume unequal variances because of the following reasons:
+
+* Heterogeneity of Variances: Again from our visualization of distribution in Python, we saw that paying students have more varied engagement patterns, possibly due to access to additional features, courses, and resources.
+* More Accurate Results: Assuming unequal variances allows for a more accurate analysis when there is a significant difference in variability between the two groups being compared.
 
