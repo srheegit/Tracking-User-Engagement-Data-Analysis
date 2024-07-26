@@ -155,10 +155,6 @@ For the free-plan students, the t-statistic is negative, indicating that the mea
 
 For the paid subscription students, the t-statistic is positive, indicating that the mean engagement in Q2 2022 is lower than in Q2 2021. Since the t-statistic (2.48) is greater than the critical value (1.96121), this means the difference is statistically significant. Therefore, we accept the null hypothesis in this case, i.e. engagement of free-plan students in Q2 2022 is lower than that in Q2 2021.
 
-## 8. Data Prediction using Linear Regression
-
-Using `sklearn` package in Python, we perform a linear regression using `minutes_watched` column as a predictor and `certificates_issued` as a target. 
-
 ### Analyzing potential Type I and Type II Error and Their Costs to the Company:
 
 We now analyze the potential impact of possible Type I and Type II errors for each group.
@@ -197,11 +193,11 @@ Through MySQL commands, we also calculate that the probability that a student wa
 
 The low customer retention rate of the platform suggests that the company failed to see the expected increase in user engagement from Q2 2021 to Q2 2022.
 
-## 8. Data Prediction with Python
+## 8. Data Prediction using Linear Regression
 
-Finally, we perform a linear regression using the `minutes_watched` column as a predictor and `certificates_issued` as a target. We use `sklearn` package to impliment linear regression.
+Using `sklearn` package in Python, we perform a linear regression using `minutes_watched` column as a predictor and `certificates_issued` as a target. We use `sklearn` package to impliment linear regression.
 
-The resulting best line-of-fit with 80-20 train-test-split is $y = 0.002x + 1.266$, giving us the $R^2$ values of $0.2638$ and $0.2526$ for the particular training and test set that we utilized, respectively.
+The resulting best-line-of-fit with 80-20 train-test-split is $y = 0.002x + 1.266$, giving us the $R^2$ values of $0.2638$ and $0.2526$ for the particular training and test set that we utilized, respectively. As $0.002 \cdot 500 = 1$, the slope of the best-line-of-fit suggests that a student may expect to see a certificate issued for every $500$ dedication of lecture engagement. However, the low $R^2$ values indicate that there may be high variability in this estimate of time needed for a certification.
 
 This means that approximately $27.37%$ of the variance in the training data’s target variable (certificates_issued) can be explained by the predictor variable (minutes_watched). This is a relatively low value, suggesting that the model does not fit the training data very we.
 
@@ -209,3 +205,9 @@ Likewise, an $R^2$ value of $0.2526$ for the testing data means that only about 
 
 ## Summary
 
+Analyzing the data through SQL, Python, and Excel helped us see the following:
+
+* After the company's introduction of new features to their educational platform, we saw a statistically significant increase in student engagement among free-plan users, but a statistically significant decrease in student engagement among paid subscription members. While correlation does not mean causation, the company's new features did not produce desired outcome among paid subscription members.
+* The distribution of student engagement, as measured by the total number of minutes that users spent watching lectures, was right-skewed, as may have been expected.
+* The low user retention rate from Q2 of 2021 to Q2 of 2022 suggests further analysis is needed to find out the reason behind it.
+* There was a moderate positive correlation between user engagement and the number of certificates issued to the student. A best line-of-fit suggests that a student may expect to see a certificate issued for every $500$ dedication of lecture engagement. However, there may be high variability in this estimate of time needed for a certification.
